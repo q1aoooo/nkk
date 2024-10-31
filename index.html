@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人互動頁面</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #greeting {
+            font-size: 1.5em;
+            color: #333;
+            margin: 20px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>歡迎來到我的 GitHub 互動頁面！</h1>
+    <div id="greeting"></div>
+
+    <script>
+        $(document).ready(function(){
+            const greetings = ["哈嚕！", "嗨嗨！", "很高興見到你！", "今天過得還行嗎", "感謝你的到訪><！"];
+            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+            $('#greeting').text(randomGreeting);
+        });
+    </script>
+</body>
+</html>
